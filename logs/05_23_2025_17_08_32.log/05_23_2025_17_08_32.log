@@ -1,0 +1,49 @@
+[ 2025-05-23 17:08:48,636 ] 42 root - INFO - Start data Ingestion
+[ 2025-05-23 17:09:46,042 ] 69 root - INFO - Performed train test split on the dataframe
+[ 2025-05-23 17:09:46,042 ] 71 root - INFO - Exited split_data_as_train_test method of Data_Ingestion class
+[ 2025-05-23 17:09:46,042 ] 79 root - INFO - Exporting train and test file path.
+[ 2025-05-23 17:09:49,647 ] 88 root - INFO - Exported train and test file path.
+[ 2025-05-23 17:09:49,670 ] 45 root - INFO - Data Ingestion completed and artifact: DataIngestionArtifact(trained_file_path='Artifacts\\05_23_2025_17_08_32\\data_ingestion\\ingested\\train.csv', test_file_path='Artifacts\\05_23_2025_17_08_32\\data_ingestion\\ingested\\test.csv')
+[ 2025-05-23 17:09:49,691 ] 55 root - INFO - Initiate the data Validation
+[ 2025-05-23 17:09:50,850 ] 93 root - INFO - Required number of columns:3
+[ 2025-05-23 17:09:50,850 ] 94 root - INFO - Data frame has columns:55
+[ 2025-05-23 17:09:50,850 ] 93 root - INFO - Required number of columns:3
+[ 2025-05-23 17:09:50,850 ] 94 root - INFO - Data frame has columns:55
+[ 2025-05-23 17:09:59,593 ] 147 root - INFO - Initiating data transformation process
+[ 2025-05-23 17:10:00,791 ] 78 root - INFO - Entered the save_object method of MainUtils class
+[ 2025-05-23 17:10:00,792 ] 82 root - INFO - Exited the save_object method of MainUtils class
+[ 2025-05-23 17:10:00,792 ] 71 root - INFO - Building preprocessing pipeline with skewness and outlier adjustment
+[ 2025-05-23 17:10:01,118 ] 114 root - INFO - Skewed numeric columns: ['Vertical_Distance_To_Hydrology', 'Hillshade_9am', 'Hillshade_Noon', 'Horizontal_Distance_To_Fire_Points', 'Wilderness_Area2', 'Wilderness_Area3', 'Wilderness_Area4', 'Soil_Type1', 'Soil_Type2', 'Soil_Type3', 'Soil_Type4', 'Soil_Type5', 'Soil_Type6', 'Soil_Type7', 'Soil_Type8', 'Soil_Type9', 'Soil_Type10', 'Soil_Type11', 'Soil_Type12', 'Soil_Type13', 'Soil_Type14', 'Soil_Type15', 'Soil_Type16', 'Soil_Type17', 'Soil_Type18', 'Soil_Type19', 'Soil_Type20', 'Soil_Type21', 'Soil_Type22', 'Soil_Type23', 'Soil_Type24', 'Soil_Type26', 'Soil_Type27', 'Soil_Type28', 'Soil_Type30', 'Soil_Type31', 'Soil_Type32', 'Soil_Type33', 'Soil_Type34', 'Soil_Type35', 'Soil_Type36', 'Soil_Type37', 'Soil_Type38', 'Soil_Type39', 'Soil_Type40']
+[ 2025-05-23 17:10:01,118 ] 115 root - INFO - Non-skewed numeric columns: ['Elevation', 'Aspect', 'Slope', 'Horizontal_Distance_To_Hydrology', 'Horizontal_Distance_To_Roadways', 'Hillshade_3pm', 'Wilderness_Area1', 'Soil_Type25', 'Soil_Type29']
+[ 2025-05-23 17:10:25,612 ] 78 root - INFO - Entered the save_object method of MainUtils class
+[ 2025-05-23 17:10:25,614 ] 82 root - INFO - Exited the save_object method of MainUtils class
+[ 2025-05-23 17:10:25,614 ] 78 root - INFO - Entered the save_object method of MainUtils class
+[ 2025-05-23 17:10:25,615 ] 82 root - INFO - Exited the save_object method of MainUtils class
+[ 2025-05-23 17:11:13,422 ] 16 root - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         0.0       0.92      0.92      0.92     18549
+         1.0       0.95      0.96      0.95     36535
+         2.0       0.93      0.94      0.93      4309
+         3.0       0.86      0.82      0.84       549
+         4.0       0.86      0.84      0.85      1394
+         5.0       0.89      0.88      0.88      2444
+         6.0       0.93      0.90      0.91      1020
+
+    accuracy                           0.94     64800
+   macro avg       0.91      0.89      0.90     64800
+weighted avg       0.94      0.94      0.94     64800
+
+[ 2025-05-23 17:11:13,453 ] 17 root - INFO - Confusion Matrix:
+[[17029  1419     2     0    30     4    65]
+ [ 1377 34923    27     0   151    51     6]
+ [    3    34  4033    52     9   178     0]
+ [    0     0    71   449     0    29     0]
+ [   28   180     4     0  1174     8     0]
+ [   10    57   195    20     8  2154     0]
+ [   92    12     0     0     1     0   915]]
+[ 2025-05-23 17:11:31,937 ] 78 root - INFO - Entered the save_object method of MainUtils class
+[ 2025-05-23 17:11:31,938 ] 82 root - INFO - Exited the save_object method of MainUtils class
+[ 2025-05-23 17:11:31,938 ] 78 root - INFO - Entered the save_object method of MainUtils class
+[ 2025-05-23 17:11:31,941 ] 82 root - INFO - Exited the save_object method of MainUtils class
+[ 2025-05-23 17:11:31,941 ] 186 root - INFO - Model trainer artifact: ModelTrainerArtifact(trained_model_file_path='Artifacts\\05_23_2025_17_08_32\\model_trainer\\trained_model\\model.pkl', train_metric_artifact=ClassificationMetricArtifact(f1_score=1.0, precision_score=1.0, recall_score=1.0), test_metric_artifact=ClassificationMetricArtifact(f1_score=0.8987874637815845, precision_score=0.9052185336024905, recall_score=0.892616160102438))
