@@ -1,12 +1,12 @@
-# 🛡️ Network Security Intrusion Detection & GenAI Blog Generation System
+#Network Security Intrusion Detection & GenAI Blog Generation System
 
 This repository combines a full-fledged **Machine Learning Pipeline for Intrusion Detection** and a **Generative AI Blog Generation System** using state-of-the-art tools like **AWS Bedrock**, **LLaMA 3**, **FastAPI**, **MongoDB**, **MLflow**, **Docker**, and **GitHub Actions**.
 
 ---
 
-## 🔍 Project 1: Intrusion Detection System (UNSW-NB15 Dataset)
+## Project 1: Intrusion Detection System (UNSW-NB15 Dataset)
 
-### 🚀 Key Features
+### Key Features
 
 - **Exploratory Data Analysis (EDA)**  
   Analyzed the dataset using `pandas`, `matplotlib`, and `seaborn` to detect:
@@ -49,9 +49,9 @@ This repository combines a full-fledged **Machine Learning Pipeline for Intrusio
 
 ---
 
-## 🤖 Project 2: Blog Generation with GenAI (Meta LLaMA 3)
+## Project 2: Blog Generation with GenAI (Meta LLaMA 3)
 
-### ✨ Features
+### Features
 
 - **Amazon Bedrock Integration**
   - Uses **Meta's LLaMA 3** model for blog content generation via `boto3`.
