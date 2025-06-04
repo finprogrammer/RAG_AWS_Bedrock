@@ -60,10 +60,5 @@ This repository combines a full-fledged **Machine Learning Pipeline for Intrusio
   - AWS Lambda function triggers blog generation on HTTP requests.
   - Blog content is stored automatically in an S3 bucket.
 
-- **Blog Generator Flow**
-  ```mermaid
-  graph TD;
-    A[User Input via REST API] --> B[Lambda Handler];
-    B --> C[Generate Blog via Bedrock LLaMA 3];
-    C --> D[Store Output in S3];
-    D --> E[Response to Client];
+![blog](https://github.com/user-attachments/assets/9972447d-3091-4477-bd88-9d2ec9d60010)
+
