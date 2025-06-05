@@ -3,21 +3,8 @@
 ### Key Features
 
 - **Exploratory Data Analysis (EDA)**  
-  Analyzed the dataset using `pandas`, `matplotlib`, and `seaborn` to detect:
-  - Missing values
-  - Outliers and skewness
-  - Feature correlation
-  - Categorical cardinality
-  - Class imbalance
 
 - **ETL Pipeline**  
-  Structured modular ETL workflow with the following:
-  - **Data Ingestion:** Extracts raw data from MongoDB.
-  - **Data Validation:** Detects data drift using the Kolmogorov–Smirnov (KS) test and ensures schema conformity.
-  - **Data Transformation:** 
-    - Handles missing values, encoding, scaling.
-    - Class imbalance handled with SMOTE.
-    - Saves transformed objects and pipelines for reproducibility.
 
 - **Model Training & Evaluation**
   - Trains multiclass classification models using `GridSearchCV`.
@@ -57,6 +44,12 @@
 ![blog](https://github.com/user-attachments/assets/9972447d-3091-4477-bd88-9d2ec9d60010)
 
 ## Project 3: ETL Pipeline Automation with Apache Airflow
+- **ETL Pipeline**  
+  Structured modular ETL workflow with the following:
+  - **Data Ingestion:** Extracts raw data from MongoDB.
+  - **Data Validation:** Detects data drift using the Kolmogorov–Smirnov (KS) test and ensures schema conformity.
+  - **Data Transformation:** 
+    - Handles missing values, encoding, scaling.
+    - Class imbalance handled with SMOTE.
+    - Saves transformed objects and pipelines for reproducibility.
 
-
->>>>>>> ab703984d308eb58f89a830fc12e0c2fe1143cad
