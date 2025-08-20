@@ -1,6 +1,6 @@
 # AWS Bedrock Blog Generators (Vanilla + RAG) — Mono-Repo
 
-This repository contains **two AWS Lambda projects** that generate blog posts with Amazon Bedrock and store outputs in Amazon S3.
+This repository contains two AWS Lambda projects that generate blog posts using Amazon Bedrock and store the outputs in Amazon S3. The functions can be triggered via an API client (e.g., Postman) through API Gateway.
 
 1. **Project A — Simple Blog Generator (Vanilla LLM)**  
    - Lambda function that takes a `blog_topic`, calls a Bedrock foundation model, and uploads the generated text to S3.  
@@ -21,3 +21,5 @@ This repository contains **two AWS Lambda projects** that generate blog posts wi
 - **Environment variable configuration**
 
 ---
+
+![alt text](rag.png)
