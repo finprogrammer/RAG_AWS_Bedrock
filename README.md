@@ -22,6 +22,9 @@ This repository contains two AWS Lambda projects that generate blog posts using 
 
 ---
 
+API client Postman:
 ![alt text](rag.png)
 
+
+Generated blog stored in s3 bucket in .md format:
 ![alt text](image.png)
