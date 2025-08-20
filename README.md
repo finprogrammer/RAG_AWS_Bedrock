@@ -22,7 +22,7 @@ This repository contains two AWS Lambda projects that generate blog posts using 
 
 ---
 
-API client Postman:
+Example Postman POST request: providing a blog topic in raw JSON and receiving a Bedrock RAG response with citations:
 ![alt text](rag.png)
 
 
