@@ -1,55 +1,25 @@
-## Project 1: Intrusion Detection System (UNSW-NB15 Dataset)
+# AWS Bedrock Blog Generators (Vanilla + RAG) — Mono-Repo
 
-### Key Features
+This repository contains **two AWS Lambda projects** that generate blog posts with Amazon Bedrock and store outputs in Amazon S3.
 
-- **Exploratory Data Analysis (EDA)**  
+1. **Project A — Simple Blog Generator (Vanilla LLM)**  
+   - Lambda function that takes a `blog_topic`, calls a Bedrock foundation model, and uploads the generated text to S3.  
+   - File: `lambda_simple_blog.py`
 
-- **ETL Pipeline**  
-
-- **Model Training & Evaluation**
-  - Trains multiclass classification models using `GridSearchCV`.
-  - Evaluates models using `F1-score` (weighted).
-  - Saves the best model and preprocessing objects as `.pkl` files to AWS S3.
-
-- **CI/CD Pipeline**
-  - **GitHub Actions** for:
-    - Code linting
-    - Building Docker containers
-    - Pushing Docker images to **AWS Elastic Container Registry (ECR)**
-    - Deploying containers to **AWS EC2**
-
-- **MLOps with DagsHub & MLflow**
-  - Tracks experiments, models, parameters, and metrics.
-  - Uses `MLflow` integrated with `DagsHub` for version control and collaboration.
-
-- **Web-Based Triggering**
-  - Trains and predicts via a **FastAPI** interface with **Jinja2 templating**.
-
-- **Cloud Integration**
-  - Stores raw and processed data, models, and transformers in **AWS S3**.
+2. **Project B — RAG vs. Vanilla Comparator**  
+   - Lambda function that can run **vanilla** generation *and/or* **RAG** (via Bedrock Knowledge Bases), records timings, persists artifacts (JSON, Markdown, optional `.diff`) to S3, and returns a compact API response.  
+   - File: `lambda_rag_compare.py`
 
 ---
 
-## Project 2: Blog Generation with GenAI (Meta LLaMA 3)
+## ✨ Features
 
-### Features
+- **Bedrock integration** via both `converse` and `invoke_model`
+- **Vanilla vs. RAG** comparison with optional unified diffs
+- **S3 artifacting** for all outputs
+- **Compact JSON API responses**
+- **Environment variable configuration**
 
-- **Amazon Bedrock Integration**
-  - Uses **Meta's LLaMA 3** model for blog content generation via `boto3`.
+---
 
-- **AWS Lambda + API Gateway**
-  - AWS Lambda function triggers blog generation on HTTP requests.
-  - Blog content is stored automatically in an S3 bucket.
-
-![blog](https://github.com/user-attachments/assets/9972447d-3091-4477-bd88-9d2ec9d60010)
-
-## Project 3: ETL Pipeline Automation with Apache Airflow
-- **ETL Pipeline**  
-  Structured modular ETL workflow with the following:
-  - **Data Ingestion:** Extracts raw data from MongoDB.
-  - **Data Validation:** Detects data drift using the Kolmogorov–Smirnov (KS) test and ensures schema conformity.
-  - **Data Transformation:** 
-    - Handles missing values, encoding, scaling.
-    - Class imbalance handled with SMOTE.
-    - Saves transformed objects and pipelines for reproducibility.
-
+## 🗂️ Repository Structure
