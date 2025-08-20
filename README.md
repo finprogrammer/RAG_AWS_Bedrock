@@ -12,14 +12,12 @@ This repository contains **two AWS Lambda projects** that generate blog posts wi
 
 ---
 
-## ✨ Features
+## Features
 
-- **Bedrock integration** via both `converse` and `invoke_model`
-- **Vanilla vs. RAG** comparison with optional unified diffs
+- **Bedrock integration** 
+- **Vanilla vs. RAG** comparison 
 - **S3 artifacting** for all outputs
 - **Compact JSON API responses**
 - **Environment variable configuration**
 
 ---
-
-## 🗂️ Repository Structure
