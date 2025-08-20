@@ -23,3 +23,5 @@ This repository contains two AWS Lambda projects that generate blog posts using 
 ---
 
 ![alt text](rag.png)
+
+![alt text](image.png)
