@@ -28,3 +28,5 @@ Example Postman POST request: providing a blog topic in raw JSON and receiving a
 
 Generated blog stored in s3 bucket in .md format:
 ![alt text](image.png)
+
+<img width="1902" height="843" alt="image" src="https://github.com/user-attachments/assets/7f1af5f2-b88f-402b-8fb3-5109429369e9" />
